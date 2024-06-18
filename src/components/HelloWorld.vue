@@ -20,7 +20,7 @@ const videoList = reactive([
         alt: '实验组-骨架屏-自动弹起',
         begin: 6.099,
         end: 0,
-      }
+      },
     ]
   },
   {
@@ -38,6 +38,40 @@ const videoList = reactive([
         begin: 0.666,
         end: 0,
       }
+    ]
+  },
+  {
+    desc: '容器就绪后再弹起对降低白屏时间（自动拉起）的影响',
+    videos: [
+      {
+        url: 'https://lf3-infras.bytetos.com/obj/static-assets/3223151d85da4e65506d158e42a2d1b0.mp4',
+        alt: '实验组-骨架屏-自动弹起.',
+        begin: 6.099,
+        end: 0,
+      },
+      {
+        url: 'https://lf9-infras.bytetos.com/obj/static-assets/877c4426ff86612f6267c9cb7b719ba8.mp4',
+        alt: '实验组-容器就绪再显示&骨架屏-自动拉起',
+        begin: 8.0666,
+        end: 0,
+      },
+    ]
+  },
+  {
+    desc: '容器就绪后再弹起对降低白屏时间（二开）的影响',
+    videos: [
+      {
+        url: 'https://lf6-infras.bytetos.com/obj/static-assets/644f29d39f6d31d63fdacf5670f1d33b.mp4',
+        alt: '实验组-html缓存-二开.',
+        begin: 0.666,
+        end: 0,
+      },
+      {
+        url: 'https://lf26-infras.bytetos.com/obj/static-assets/39f93b756cb6ae6d163545fe266465d4.mp4',
+        alt: '实验组-容器就绪再显示&骨架屏&html缓存-二开',
+        begin: 0.9333,
+        end: 0,
+      },
     ]
   },
 ])
