@@ -20,8 +20,8 @@ export PERFSEE_TOKEN=uBO5buq//vB3/xXw8EF95jQXmzSvTVDzX1pqxs/p0Ddk=
 # FE Build
 pnpm install --no-frozen-lockfile
 
-pnpm run deploy
-mkdir -p ./output/resource/
-cp -rf ./output_resource/resource/* ./output/resource/
+pnpm run build
+mkdir -p ./output/
+cp -rf ./dist/* ./output/
 
 env

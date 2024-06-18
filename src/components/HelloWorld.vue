@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
+import { reactive } from 'vue'
 import { Button } from '@/components/ui/button'
 
 defineProps<{ msg: string }>()
-
-const count = ref(0)
 
 const videoList = reactive([
   {
@@ -44,9 +42,9 @@ const videoList = reactive([
   },
 ])
 
-const handleReplay = (item) => {
+const handleReplay = (item: any) => {
   item.isPlaying = true
-  item.videos.forEach(video => {
+  item.videos.forEach((video: any) => {
     const videoEl = document.querySelector(`video[alt="${video.alt}"]`) as HTMLVideoElement
     // why cut 0.3s? 有个明显的起点标识
     videoEl.currentTime = video.begin - 0.3
@@ -54,9 +52,9 @@ const handleReplay = (item) => {
   })
 }
 
-const togglePlay = (item) => {
+const togglePlay = (item: any) => {
   item.isPlaying = !item.isPlaying
-  item.videos.forEach(video => {
+  item.videos.forEach((video: any) => {
     const videoEl = document.querySelector(`video[alt="${video.alt}"]`) as HTMLVideoElement
     if (item.isPlaying) {
       videoEl.play()
@@ -76,7 +74,7 @@ const togglePlay = (item) => {
         <Button @click="handleReplay(item)">Replay</Button>
         <Button variant="destructive" @click="togglePlay(item)">{{ item.isPlaying ? 'Pause' : 'Play' }}</Button>
       </p>
-      <section v-for="video in item.videos" :key="video.src">
+      <section v-for="video in item.videos" :key="video.url">
         <div>{{ video.alt }}</div>
         <video
           controls
